@@ -299,38 +299,31 @@
 
       
         
-          <h5 id="1-0-1属性"><a href="#1-0-1属性" class="headerlink" title="1.0.1属性"></a>1.0.1属性</h5><pre>
-    /**
-     * 默认容量
-     */
-    private static final int DEFAULT_CAPACITY = 10;
-
-    /**
-     * 一个空数组
-     * 当用户指定该 ArrayList 容量为 0 时，返回该空数组
-     */
-    private static final Object[] EMPTY_ELEMENTDATA = {};
-
-    /**
-     * 一个空数组实例
-     * 当用户没有指定 ArrayList 的容量时(即调用无参构造函数)，返回的是该数组==>刚创建一个 ArrayList 时，其内数据量为 0。
-     * 当用户第一次添加元素时，该数组将会扩容，变成默认容量为 10(DEFAULT_CAPACITY) 的一个数组===>通过  ensureCapacityInternal() 实现
-     * 它与 EMPTY_ELEMENTDATA 的区别就是：该数组是默认返回的，而后者是在用户指定容量为 0 时返回
-     */
-    private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};
-
-    /**
-     * ArrayList基于数组实现，用该数组保存数据, ArrayList 的容量就是该数组的长度
-     * 该值为 DEFAULTCAPACITY_EMPTY_ELEMENTDATA 时，当第一次添加元素进入 ArrayList 中时，数组将扩容值 DEFAULT_CAPACITY(10)
-     */
-    transient Object[] elementData;
-
-    /**
-     * ArrayList实际存储的数据数量
-     */
-    private int size;
-
-</pre>
+          <ol>
+<li><p>1.0.1属性<br><pre><br> /**</pre></p>
+<ul>
+<li><p>默认容量<br>*/<br>private static final int DEFAULT_CAPACITY = 10;</p>
+<p>/**</p>
+</li>
+<li>一个空数组</li>
+<li><p>当用户指定该 ArrayList 容量为 0 时，返回该空数组<br>*/<br>private static final Object[] EMPTY_ELEMENTDATA = {};</p>
+<p>/**</p>
+</li>
+<li>一个空数组实例</li>
+<li>当用户没有指定 ArrayList 的容量时(即调用无参构造函数)，返回的是该数组==&gt;刚创建一个 ArrayList 时，其内数据量为 0。</li>
+<li>当用户第一次添加元素时，该数组将会扩容，变成默认容量为 10(DEFAULT_CAPACITY) 的一个数组===&gt;通过  ensureCapacityInternal() 实现</li>
+<li><p>它与 EMPTY_ELEMENTDATA 的区别就是：该数组是默认返回的，而后者是在用户指定容量为 0 时返回<br>*/<br>private static final Object[] DEFAULTCAPACITY_EMPTY_ELEMENTDATA = {};</p>
+<p>/**</p>
+</li>
+<li>ArrayList基于数组实现，用该数组保存数据, ArrayList 的容量就是该数组的长度</li>
+<li><p>该值为 DEFAULTCAPACITY_EMPTY_ELEMENTDATA 时，当第一次添加元素进入 ArrayList 中时，数组将扩容值 DEFAULT_CAPACITY(10)<br>*/<br>transient Object[] elementData;</p>
+<p>/**</p>
+</li>
+<li>ArrayList实际存储的数据数量<br>*/<br>private int size;</li>
+</ul>
+</li>
+</ol>
+<p><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/12/11/ArrayList源码分析-JDK1-8/#more" rel="contents">
